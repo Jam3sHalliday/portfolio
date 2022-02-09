@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;400;500;600&display=swap" rel="stylesheet">
+
+    <link href="http://fonts.cdnfonts.com/css/pricedown" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Portfolio</title>
+</head>
+<body>
+    <header class="header" id="header">
+        <a href="#" class="header__logo">Logo</a>
+
+        <ul class="header__nav">
+            <li class="header__nav-item" style="animation-delay: 500ms;">
+                <a href="#intro" class="nav-link">introduction</a>
+            </li>
+            <li class="header__nav-item" style="animation-delay: 400ms;">
+                <a href="#about" class="nav-link">about</a>
+            </li>
+            <li class="header__nav-item" style="animation-delay: 300ms;">
+                <a href="#experience" class="nav-link">experience</a>
+            </li>
+            <li class="header__nav-item" style="animation-delay: 200ms;">
+                <a href="#projects" class="nav-link">projects</a>
+            </li>
+            <li class="header__nav-item" style="animation-delay: 100ms;">
+                <a href="#contact" class="nav-link">contact</a>
+            </li>
+        </ul>
+    </header>
+
+    <!-- <div class="mustache">
+        <div class="social">
+            <ul class="social__list">
+                <li class="social__list-item">
+                    <a href="#" class="item-link">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            role="img"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            className="feather feather-github">
+                            <title>GitHub</title>
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                    </a>
+                </li>
+                <li class="social__list-item">
+                    <a href="#" class="item-link">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            role="img"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            className="feather feather-linkedin">
+                            <title>LinkedIn</title>
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                    </a>
+                </li>
+                <li class="social__list-item">
+                    <a href="#" class="item-link"></a>
+                </li>
+            </ul>
+        </div>        
+    </div> -->
+
+    <main class="main">
+        <section class="intro" id="intro">
+            <div id="typed-strings">
+                <p>
+                    <span class="intro__typed-dev intro__typed" style="font-family: 'Source Code Pro';">&lt;web developer&sol;&gt;</span>
+                </p>
+                <p>
+                    <span class="intro__typed-gamer intro__typed" style="font-family: 'Pricedown Bl';">noob gamer</span>
+                </p>
+                <p>
+                    <span class="intro__typed-guitarist intro__typed" style="font-family: 'Source Code Pro';">terrible guitarist</span>
+                </p>
+                <p>
+                    <span class="intro__typed-bugs intro__typed" style="font-family: 'Source Code Pro';">bugs creator</span>
+                </p>
+            </div>
+
+            <div class="intro__container">
+                <p class="open-tag intro__tag">introduction</p>
+                <div class="intro__content">
+                    <h1 class="intro__hello">Hi! My name is</h1>
+                    <h2 class="intro__name">Phuoc Quang</h2>
+                    <h3 class="intro__iam">I'm <span id="typed"></span></h3>
+                    <p class="intro__description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque hic commodi maxime laudantium consequuntur ratione, ipsum minus accusantium numquam iste quaerat omnis unde vel repellendus maiores quis ab. Eos, officia!
+                    </p>
+                </div>
+                <p class="close-tag intro__tag" data-text="introduction"></p>
+            </div>
+        </section>
+
+        <section class="about" id="about">
+            <div class="about__container">
+                <p class="open-tag intro__tag">about</p>
+                <p class="close-tag intro__tag" data-text="about"></p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">footer</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        var typed = new Typed("#typed", {
+            stringsElement: '#typed-strings',
+            typeSpeed: 80,
+            backSpeed: 60,
+            backDelay: 50,
+            startDelay: 50,
+            loop: true,
+        });
+    </script>
+    <script src="./js/animation.js"></script>
+</body>
+</html>

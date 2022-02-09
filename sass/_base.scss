@@ -1,0 +1,69 @@
+@import "./variables";
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #0c0c0c;
+    color: $color-white;
+}                                                                    
+
+::selection {
+    color: $color-lightest-navy;
+    background-color: $color-green;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: .8rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 12px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: $color-light-navy; 
+    border-radius: 12px;
+    transition: all 5s;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgba($color: $color-green, $alpha: .8); 
+}
+
+p.open-tag {
+    font-family: "Source Code Pro", sans-serif;
+    font-size: 3.6rem;
+    &::before {
+        content: "<";
+    }
+
+    &::after {
+        content: ">";
+    }
+}
+
+p.close-tag {
+    font-size: 3.6rem;
+    font-family: "Source Code Pro", sans-serif;
+
+    &::after {
+        content: "</" attr(data-text) ">";
+    }
+}

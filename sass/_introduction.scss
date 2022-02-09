@@ -1,0 +1,70 @@
+@import "./variables";
+
+.intro {
+    width: 80vw;
+    height: 100vh;
+
+    margin: 0 auto;
+
+    &__container {
+        min-height: 90%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__content {
+        text-align: left;
+        margin: 8rem 10rem;        
+    }
+
+    &__hello {
+        color: $color-green;
+        font-size: 1.6rem;
+        margin: 0 0 2rem .4rem;
+    }
+
+    &__name {
+        font-size: 8rem;
+        color: $color-lightest-slate;
+    }
+
+    &__iam {
+        font-size: 6rem;
+        margin-left: .3rem;
+        color: $color-light-slate;
+    }
+
+    &__description {
+        width: 60%;
+        margin-top: 3rem;
+        font-size: 1.6rem;
+    }
+
+    &__tag {
+        color: $color-dark-yellow;
+    }
+
+    &__typed {
+        background-size: contain;
+        -webkit-background-clip: text;
+        color: transparent;
+        font-weight: 600;
+    }
+
+    &__typed-dev {
+        background-image: url("../img/programming-bg.jpg");
+    }
+
+    &__typed-gamer {
+        // background-image: url("../img/gtav.jpg");
+        color: $color-white;
+    }
+    &__typed-guitarist {
+        background-image: url("../img/sheet-bg.jpg");
+    }
+    &__typed-bugs {
+        background-image: url("../img/error-bg.png");
+    }
+}
