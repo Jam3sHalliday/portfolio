@@ -1,0 +1,78 @@
+.exp {
+    width: 80vw;
+    margin: 0 auto;
+
+    &__container {
+        min-height: 90%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__content {
+
+    }
+
+    &__tab {
+        margin: 4rem 0;
+
+        display: flex;
+        justify-content: center;
+
+        .tab {
+            transition: all .5s;
+            @include flex-center;
+            flex-direction: column;
+            width: 25rem;
+        }
+          
+          /* Style the buttons inside the tab */
+          .tab button {
+            background-color: inherit;
+            color: $color-white;
+            padding: 2.4rem 1.6rem;
+            width: 100%;
+            border: none;
+            border-left: 1px solid $color-lightest-navy;
+            outline: none;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 17px;
+            transform-origin: top;
+            font-family: 'Source Code Pro';
+          }
+          
+          /* Change background color of buttons on hover */
+          .tab button:hover {
+            color: $color-green;
+            border-left: 1px solid $color-white;    
+          }
+          
+          /* Create an active/current "tab button" class */
+          .tab button.active {
+            border-left: 1px solid $color-green;
+          }
+          
+          /* Style the tab content */
+        .tabcontent {
+            height: auto;
+            padding: 0px 12px;
+            width: 70%;
+
+            transition: all .5s;
+
+            .whereami {
+                font-size: 1.6rem;
+                margin-bottom: 8px;
+            }
+
+            .description {
+                line-height: 1.3;
+                font-size: 1.3rem;
+            }
+        }
+    }
+
+}

@@ -14,7 +14,7 @@ html {
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Source Code Pro', 'Open Sans', sans-serif;
     background-color: #0c0c0c;
     color: $color-white;
 }                                                                    
@@ -66,4 +66,8 @@ p.close-tag {
     &::after {
         content: "</" attr(data-text) ">";
     }
+}
+
+main.main {
+    
 }

@@ -10,7 +10,7 @@ html {
   box-sizing: border-box; }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Source Code Pro', 'Open Sans', sans-serif;
   background-color: #0c0c0c;
   color: #e6f1ff; }
 
@@ -150,3 +150,57 @@ p.close-tag {
     display: flex;
     flex-direction: column;
     justify-content: center; }
+
+.exp {
+  width: 80vw;
+  margin: 0 auto; }
+  .exp__container {
+    min-height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+  .exp__tab {
+    margin: 4rem 0;
+    display: flex;
+    justify-content: center;
+    /* Style the buttons inside the tab */
+    /* Change background color of buttons on hover */
+    /* Create an active/current "tab button" class */
+    /* Style the tab content */ }
+    .exp__tab .tab {
+      transition: all .5s;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 25rem; }
+    .exp__tab .tab button {
+      background-color: inherit;
+      color: #e6f1ff;
+      padding: 2.4rem 1.6rem;
+      width: 100%;
+      border: none;
+      border-left: 1px solid #233554;
+      outline: none;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-size: 17px;
+      transform-origin: top;
+      font-family: 'Source Code Pro'; }
+    .exp__tab .tab button:hover {
+      color: #64ffda;
+      border-left: 1px solid #e6f1ff; }
+    .exp__tab .tab button.active {
+      border-left: 1px solid #64ffda; }
+    .exp__tab .tabcontent {
+      height: auto;
+      padding: 0px 12px;
+      width: 70%;
+      transition: all .5s; }
+      .exp__tab .tabcontent .whereami {
+        font-size: 1.6rem;
+        margin-bottom: 8px; }
+      .exp__tab .tabcontent .description {
+        line-height: 1.3;
+        font-size: 1.3rem; }

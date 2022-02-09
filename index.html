@@ -118,8 +118,69 @@
 
         <section class="about" id="about">
             <div class="about__container">
-                <p class="open-tag intro__tag">about</p>
-                <p class="close-tag intro__tag" data-text="about"></p>
+                <p class="open-tag">about</p>
+                <div class="about__content">
+                    <div class="about__text">
+
+                    </div>
+                    <div class="about__image"></div>
+                </div>
+                <p class="close-tag" data-text="about"></p>
+            </div>
+        </section>
+
+        <section class="exp" id="experience">
+            <div class="exp__container">
+                <p class="open-tag">experience</p>
+                <div class="exp__content">
+                    <div class="exp__tab">
+                        <div class="tab">
+                            <button class="tablinks" onclick="openCity(event, 'goalist')" id="defaultOpen">Goalist Vietnam</button>
+                            <button class="tablinks" onclick="openCity(event, 'savemoney')">Savemoney</button>
+                            <button class="tablinks" onclick="openCity(event, 'caothang')">Cao Thange College</button>
+                        </div>
+                        
+                        <div id="goalist" class="tabcontent">
+                            <p class="whereami">Front end Developer (July 2021 - Feb 2022)</p>
+
+                        </div>
+                        
+                        <div id="savemoney" class="tabcontent">
+                            <p class="whereami">Front end Developer (May 12 2020 - July 2021)</p>
+                            <p class="description">
+                                I must say this is very very very lucky, I got my first job ever, as a intern front end developer, after 3 months probation, I passed, then I have a chance to join my team and worked on an Insurtech project.
+                                <br>
+                                About my team, this is a team I'll never forget, everyone is very funny, leader and teammate always supportive and like to share their knowledge, we also have a english time to talk to others, my teamlead was also open for me opportunities to worked on weird tasks to improve my skills, most of time I failed, but I always learn something new from work, and from him everytime. 
+                            </p>
+                        </div>
+                        
+                        <div id="caothang" class="tabcontent">
+                            <p class="whereami">College's Freshmen (Aug 2018 - Dec 2019)</p>
+                            <p class="description">
+                                I was a freshmen in Cao Thang College that year, my major was Network Administrator.
+                                <br />
+                                I joined by accident because I didn't pass the university entrance exam.
+                                <br />
+                                After one year studied in college, luckily I found for myself something interesting - programming.
+                                <br>
+                                Back in the day few years ago, in the evening of May 2019, I was playing game too much, and just some thought appeared in my head, I was confused for a while, didn't know what I'm doing for my life, so I sit down, do some research about my major, about IT, and then I found a "thing" called web development, it sounds good :D, so I started my journey, first with HTML.
+                                <br />
+                                And after maybe half year of self-taught, I found out that College is not fit me anymore, so I decided to quit,...
+
+                                That's how my "lucky", "dumb" and "magic" journey begin!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <p class="close-tag" data-text="experience"></p>
+            </div>
+        </section>
+
+        <section class="projects" id="projects">
+            <div class="projects__container">
+                <p class="open-tag">projects</p>
+
+                <p class="close-tag" data-text="projects"></p>
             </div>
         </section>
     </main>
@@ -138,5 +199,24 @@
         });
     </script>
     <script src="./js/animation.js"></script>
+
+    <script>
+        function openCity(evt, cityName) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablinks");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+          }
+          document.getElementById(cityName).style.display = "block";
+          evt.currentTarget.className += " active";
+        }
+        
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+    </script>
 </body>
 </html>
