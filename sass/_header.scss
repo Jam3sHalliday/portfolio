@@ -12,7 +12,8 @@
     
     height: 6rem;
     padding: 0 8rem;
-    font-size: 1.3rem   ;
+    font-size: 1.3rem;
+    z-index: 10000;
 
     &__nav {
         display: flex;

@@ -1,6 +1,7 @@
 @import "./variables";
 
 .intro {
+    position: relative;
     width: 80vw;
     height: 100vh;
 
@@ -34,6 +35,8 @@
         font-size: 6rem;
         margin-left: .3rem;
         color: $color-light-slate;
+        padding: 1rem 0;
+        height: 10rem;
     }
 
     &__description {

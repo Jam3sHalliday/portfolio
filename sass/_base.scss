@@ -48,8 +48,10 @@ body {
 }
 
 p.open-tag {
+    display: inline-block;
     font-family: "Source Code Pro", sans-serif;
     font-size: 3.6rem;
+    user-select: none;
     &::before {
         content: "<";
     }
@@ -60,6 +62,9 @@ p.open-tag {
 }
 
 p.close-tag {
+    display: inline-block;
+    user-select: none;
+
     font-size: 3.6rem;
     font-family: "Source Code Pro", sans-serif;
 
@@ -68,6 +73,12 @@ p.close-tag {
     }
 }
 
-main.main {
-    
+a {
+    text-decoration: none;
+    color: $color-green;
+    transition: all .3s;
+
+    &:hover {
+        color: #7ed56f;
+    }
 }

@@ -10,9 +10,4 @@ function navLinkSmooth() {
     });
 }
 
-function header() {
-    const header = document.getElementById("header");
-}
-
 navLinkSmooth();
-header();
