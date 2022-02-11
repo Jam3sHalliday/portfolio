@@ -1,6 +1,6 @@
 .about {
     width: 80vw;
-    height: 100vh;
+    height: 90vh;
 
     margin: 0 auto;
 
@@ -11,8 +11,62 @@
         flex-direction: column;
         justify-content: center;
 
-        & p.open-tag {
-                
+    }
+
+    &__content {
+        width: 90%;
+        margin: 4rem auto;
+        display: flex;
+    }
+
+    &__text {
+        font-size: 1.4rem;
+        align-self: center;
+        line-height: 1.6;
+        margin-right: 3rem;
+    }
+
+    &__image {
+        display: inline-block;
+        position: relative;
+        transition: all .5s;
+
+        &::before {
+            content: "Please don't feel weird about my mustache, this is an only image I have :l";
+
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            font-size: 1rem;
+            padding: 0 1rem .5rem 0;
+
+            width: 99%;
+            height: 99%;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            border: 1px solid $color-white;
+            border-radius: 1rem;
+            transition: all .5s;
+        }
+
+        img {
+            filter: grayscale(1);
+            border-radius: 1rem;
+            transition: all .5s;
+        }
+
+        &:hover {
+
+            &::before {
+                transform: translate(1rem, 1rem);
+            }
+
+            img {
+                filter: grayscale(0);
+                transform: translate(-1rem, -1rem);
+            }
         }
     }
 }

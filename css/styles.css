@@ -158,20 +158,59 @@ a {
 
 .about {
   width: 80vw;
-  height: 100vh;
+  height: 90vh;
   margin: 0 auto; }
   .about__container {
     min-height: 90%;
     display: flex;
     flex-direction: column;
     justify-content: center; }
+  .about__content {
+    width: 90%;
+    margin: 4rem auto;
+    display: flex; }
+  .about__text {
+    font-size: 1.4rem;
+    align-self: center;
+    line-height: 1.6;
+    margin-right: 3rem; }
+  .about__image {
+    display: inline-block;
+    position: relative;
+    transition: all .5s; }
+    .about__image::before {
+      content: "Please don't feel weird about my mustache, this is an only image I have :l";
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+      font-size: 1rem;
+      padding: 0 1rem .5rem 0;
+      width: 99%;
+      height: 99%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border: 1px solid #e6f1ff;
+      border-radius: 1rem;
+      transition: all .5s; }
+    .about__image img {
+      filter: grayscale(1);
+      border-radius: 1rem;
+      transition: all .5s; }
+    .about__image:hover::before {
+      transform: translate(1rem, 1rem); }
+    .about__image:hover img {
+      filter: grayscale(0);
+      transform: translate(-1rem, -1rem); }
 
 .exp {
   width: 80vw;
-  height: 80vh;
-  margin: 0 auto; }
+  height: 90vh;
+  margin: 0 auto;
+  padding-top: 10rem;
+  display: flex;
+  align-items: center; }
   .exp__container {
-    min-height: 90%;
     display: flex;
     flex-direction: column;
     justify-content: center; }
@@ -231,6 +270,7 @@ a {
 .projects {
   position: relative;
   width: 80vw;
+  padding-top: 10rem;
   margin: 0 auto; }
   .projects-tag {
     background-image: linear-gradient(to right, #7ed56f, #28b485);
@@ -275,7 +315,8 @@ a {
           transition: all 0.5s;
           position: absolute;
           bottom: 0;
-          right: 0; }
+          right: 0;
+          z-index: -1; }
         .projects .project-infor .infor-img-link img {
           width: 50rem;
           border-radius: 2rem; }
@@ -285,8 +326,7 @@ a {
           .projects .project-infor .infor-img-link:hover::before {
             transform: scale(1.015) translate(0.5rem, 0.5rem);
             opacity: 1;
-            border: 3px solid #64ffda;
-            z-index: -1; }
+            border: 3px solid #64ffda; }
       .projects .project-infor .infor-text {
         flex-grow: 1;
         font-size: 1.4rem;

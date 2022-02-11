@@ -1,14 +1,16 @@
 .exp {
   width: 80vw;
-  height: 80vh;
+  height: 90vh;
   margin: 0 auto;
 
-  &__container {
-      min-height: 90%;
+  padding-top: 10rem;
+  display: flex;
+  align-items: center;
 
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   &__content {
