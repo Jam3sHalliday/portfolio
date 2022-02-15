@@ -8,12 +8,27 @@
     backdrop-filter: blur(2px);
     
     @include flex-center;
-    justify-content: space-between;
+    justify-content: flex-end;
     
     height: 6rem;
     padding: 0 8rem;
     font-size: 1.3rem;
     z-index: 10000;
+
+    &__logo {
+        padding-top: 1rem;
+        img {
+            filter: grayscale(1);
+            width: 6rem;
+            height: 6rem;
+            border-radius: 50%;
+            transition: all .5s;
+
+            &:hover {
+                filter: grayscale(0);
+            }
+        }
+    }
 
     &__nav {
         display: flex;

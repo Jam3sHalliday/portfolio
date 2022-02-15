@@ -11,6 +11,14 @@
 html {
     font-size: 62.5%;
     box-sizing: border-box;
+
+    @media only screen and (max-width: $bp-1200) {
+        font-size: 50%;
+    }
+
+    @media only screen and (max-width: $bp-1000) {
+        font-size: 50%;
+    }
 }
 
 body {
@@ -20,8 +28,8 @@ body {
 }                                                                    
 
 ::selection {
-    color: $color-lightest-navy;
-    background-color: $color-green;
+    color: $color-white;
+    background-color: $color-navy;
 }
 
 /* width */

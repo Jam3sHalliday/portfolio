@@ -1,0 +1,36 @@
+.footer {
+    background-image: linear-gradient(to bottom, #0c0c0c, $color-navy);
+    padding: 10rem 0;
+
+
+    .icons-list {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+
+        .icon-list-item {
+            &:not(:last-child) {
+                margin-right: 2rem;
+            }
+        }
+    }
+
+    .search__icon {
+        fill: $color-white;
+        width: 3rem;
+
+        &:hover {
+            fill: $color-green;
+        }
+    }
+
+    &__text {
+        font-size: 1.4rem;
+        text-align: center;
+        line-height: 1.6;
+        
+        p {
+            margin-bottom: 1rem;
+        }
+    }
+}

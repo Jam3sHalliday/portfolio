@@ -1,72 +1,127 @@
 .about {
     width: 80vw;
-    height: 90vh;
 
     margin: 0 auto;
+    padding-top: 10rem;
 
-    &__container {
-        min-height: 90%;
-
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-
+    &-tag {
+        background-image: linear-gradient(to left, $color-lightest-navy, #28b485);
+        -webkit-background-clip: text;
+        color: transparent;
     }
 
     &__content {
         width: 90%;
         margin: 4rem auto;
         display: flex;
+        justify-content: flex-start;
+    }
+
+    &__greeting {
+        display: block;
+        font-size: 1.6rem;
     }
 
     &__text {
+        width: 60%;
         font-size: 1.4rem;
         align-self: center;
         line-height: 1.6;
         margin-right: 3rem;
     }
 
-    &__image {
-        display: inline-block;
-        position: relative;
-        transition: all .5s;
+}
 
-        &::before {
-            content: "Please don't feel weird about my mustache, this is an only image I have :l";
+.card {
+    // FUNCTIONALITY
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    display: block;     
+    position: relative;
+    width: 50rem;
 
-            display: flex;
-            justify-content: flex-end;
-            align-items: flex-end;
-            font-size: 1rem;
-            padding: 0 1rem .5rem 0;
+    &__side {
+        transition: all .8s ease;
+        color: #fff;
+        position: absolute;
+        top: 0;
+        left: 0;
 
-            width: 99%;
-            height: 99%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        border-radius: 3px;
+        overflow: hidden;
+        box-shadow: 0 1.5rem 4rem rgba($color-white, .15);
 
-            position: absolute;
-            top: 0;
-            left: 0;
-            border: 1px solid $color-white;
-            border-radius: 1rem;
-            transition: all .5s;
-        }
-
-        img {
+        &--front {
             filter: grayscale(1);
-            border-radius: 1rem;
-            transition: all .5s;
+            border-radius: 8px;
+
+            @media only screen and (max-width: $bp-1000) {
+                width: 50rem;
+            }
         }
 
-        &:hover {
+        &--back {
+            transform: rotateY(180deg);
+            border: 2px solid $color-green;
+            border-radius: 8px;
+            width: 100%;
+            height: 100%;
+            font-size: 1.2rem;
 
-            &::before {
-                transform: translate(1rem, 1rem);
+            @include flex-center;
+            flex-direction: column;
+
+
+            .techs-list {
+                list-style: none;
+
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+
+                margin: .8rem 2rem;
+
+                .tech-item {
+                    color: $color-white;
+                    border: 1px solid currentColor;
+                    border-radius: 3px;
+                    padding: .4rem .8rem;
+                    transition: all .3s;
+
+                    &:hover {
+                        color: $color-green;
+                    }
+
+                    &:not(:last-child) {
+                        margin-right: .8rem;
+                        margin-bottom: 0.4rem;
+                    }
+                }
             }
 
-            img {
-                filter: grayscale(0);
-                transform: translate(-1rem, -1rem);
+            .download-cv {
+                color: $color-white;
+                padding: 1.2rem 1.4rem;
+                margin-top: 1.2rem;
+                border: 1px solid currentColor;
+                border-radius: 8px;
+
+                &:hover {
+                    color: $color-green;
+                }
             }
         }
     }
+
+    &:hover &__side--front {
+        transform: rotateY(-180deg);
+        filter: grayscale(0);
+    }
+
+    &:hover &__side--back {
+        transform: rotateY(0);
+    }
+
 }

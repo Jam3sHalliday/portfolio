@@ -9,9 +9,6 @@ $color-green: #64ffda;
 
 $color-dark-yellow: #e9b171;
 
-
-$font-primary: "";
-$font-pricedown: "Pricedown Bl";
 $font-source-code-pro: "Source Code Pro";
 
 $color-secondary-light: #ffb900;
@@ -19,3 +16,10 @@ $color-secondary-dark: #ff7730;
 
 $color-tertiary-light: #2998ff;
 $color-tertiary-dark: #5643fa;
+
+
+// RESPONSIVE BREAKPOINT
+$bp-1200: 75em;  // 1200px (/16)
+$bp-1000: 62.5em; // 1000px
+$bp-800: 50em; // 800 px
+$bp-600: 37.6em; // 600px 
