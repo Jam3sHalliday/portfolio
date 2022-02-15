@@ -25,6 +25,10 @@ body {
     font-family: 'Source Code Pro', 'Open Sans', sans-serif;
     background-color: #0c0c0c;
     color: $color-white;
+
+    @media only screen and (max-width: $bp-600) {
+        pointer-events: none;
+    }
 }                                                                    
 
 ::selection {

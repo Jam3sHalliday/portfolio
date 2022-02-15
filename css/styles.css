@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 *::before,
 *::after {
@@ -19,6 +20,9 @@ body {
   font-family: 'Source Code Pro', 'Open Sans', sans-serif;
   background-color: #0c0c0c;
   color: #e6f1ff; }
+  @media only screen and (max-width: 37.6em) {
+    body {
+      pointer-events: none; } }
 
 ::selection {
   color: #e6f1ff;
@@ -131,6 +135,9 @@ a {
   width: 80vw;
   height: 100vh;
   margin: 0 auto; }
+  @media only screen and (max-width: 50em) {
+    .intro {
+      width: 95vw; } }
   .intro__container {
     min-height: 90%;
     display: flex;
@@ -139,6 +146,9 @@ a {
   .intro__content {
     text-align: left;
     margin: 8rem 10rem; }
+    @media only screen and (max-width: 50em) {
+      .intro__content {
+        margin: 4rem 5rem; } }
   .intro__hello {
     color: #64ffda;
     font-size: 1.6rem;
@@ -165,7 +175,8 @@ a {
     @media only screen and (max-width: 62.5em) {
       .intro__description {
         font-size: 1.4rem;
-        margin-top: 1rem; } }
+        margin-top: 1rem;
+        width: 100%; } }
   .intro__tag {
     color: #e9b171; }
   .intro__typed {
@@ -193,6 +204,9 @@ a {
   width: 80vw;
   margin: 0 auto;
   padding-top: 10rem; }
+  @media only screen and (max-width: 50em) {
+    .about {
+      width: 95vw; } }
   .about-tag {
     background-image: linear-gradient(to left, #233554, #28b485);
     -webkit-background-clip: text;
@@ -202,15 +216,50 @@ a {
     margin: 4rem auto;
     display: flex;
     justify-content: flex-start; }
+    @media only screen and (max-width: 50em) {
+      .about__content {
+        width: 95%;
+        flex-direction: column; } }
+  .about__tech {
+    margin-top: 2rem;
+    margin-left: 2rem;
+    display: none; }
+    @media only screen and (max-width: 50em) {
+      .about__tech {
+        display: block; } }
+    .about__tech-title {
+      font-size: 1.4rem; }
+    .about__tech .tech-list {
+      display: flex;
+      flex-wrap: wrap;
+      list-style-type: none; }
+    .about__tech .tech-item {
+      font-size: 1.4rem;
+      margin: 1rem 2rem;
+      display: flex;
+      align-items: center; }
+      .about__tech .tech-item::before {
+        content: "→";
+        font-size: 1.8rem;
+        margin-right: 1rem;
+        color: #64ffda; }
   .about__greeting {
     display: block;
     font-size: 1.6rem; }
+    @media only screen and (max-width: 50em) {
+      .about__greeting {
+        font-size: 1.8rem; } }
   .about__text {
     width: 60%;
     font-size: 1.4rem;
     align-self: center;
     line-height: 1.6;
     margin-right: 3rem; }
+    @media only screen and (max-width: 50em) {
+      .about__text {
+        width: 100%;
+        font-size: 1.5rem;
+        margin-right: 0; } }
 
 .card {
   perspective: 150rem;
@@ -218,6 +267,9 @@ a {
   display: block;
   position: relative;
   width: 50rem; }
+  @media only screen and (max-width: 50em) {
+    .card {
+      display: none; } }
   .card__side {
     transition: all .8s ease;
     color: #fff;
@@ -284,6 +336,9 @@ a {
   padding-top: 10rem;
   display: flex;
   align-items: center; }
+  @media only screen and (max-width: 37.6em) {
+    .exp {
+      width: 90vw; } }
   .exp__container {
     display: flex;
     flex-direction: column;
@@ -297,6 +352,9 @@ a {
     /* Change background color of buttons on hover */
     /* Create an active/current "tab button" class */
     /* Style the tab content */ }
+    @media only screen and (max-width: 50em) {
+      .exp__tab {
+        flex-direction: column; } }
     .exp__tab .tab {
       transition: all 0.5s;
       display: flex;
@@ -304,6 +362,11 @@ a {
       align-items: center;
       flex-direction: column;
       width: 25rem; }
+      @media only screen and (max-width: 50em) {
+        .exp__tab .tab {
+          flex-direction: row;
+          width: 90%;
+          margin-bottom: 3rem; } }
     .exp__tab .tab button {
       background-color: inherit;
       color: #e6f1ff;
@@ -319,17 +382,31 @@ a {
       transform-origin: top;
       font-family: "Source Code Pro";
       text-align: left; }
+      @media only screen and (max-width: 50em) {
+        .exp__tab .tab button {
+          padding: 2rem;
+          border-left: none;
+          border-bottom: 1px dashed #233554;
+          text-align: center; } }
     .exp__tab .tab button:hover {
       color: #64ffda;
       border-left: 1px solid #e6f1ff; }
     .exp__tab .tab button.active {
       border-left: 1px solid #64ffda;
       color: #64ffda; }
+      @media only screen and (max-width: 50em) {
+        .exp__tab .tab button.active {
+          border-left: none;
+          border-bottom: 1px solid #64ffda; } }
     .exp__tab .tabcontent {
       height: auto;
       padding: 0px 12px;
       width: 70%;
       transition: all 0.5s; }
+      @media only screen and (max-width: 37.6em) {
+        .exp__tab .tabcontent {
+          width: 100%;
+          padding: 0; } }
       .exp__tab .tabcontent .whereami {
         font-size: 1.6rem;
         margin-bottom: 8px; }
@@ -346,6 +423,9 @@ a {
   width: 80vw;
   padding-top: 10rem;
   margin: 0 auto; }
+  @media only screen and (max-width: 50em) {
+    .projects {
+      width: 95vw; } }
   .projects-tag {
     background-image: linear-gradient(to right, #7ed56f, #28b485);
     -webkit-background-clip: text;
@@ -388,6 +468,10 @@ a {
         position: relative;
         filter: grayscale(1);
         transition: .5s all; }
+        @media only screen and (max-width: 50em) {
+          .projects .project-infor .infor-img-link {
+            filter: grayscale(0);
+            margin-bottom: 2rem; } }
         .projects .project-infor .infor-img-link::before {
           content: "";
           display: inline-block;
@@ -407,6 +491,9 @@ a {
           @media only screen and (max-width: 62.5em) {
             .projects .project-infor .infor-img-link img {
               width: 40rem; } }
+          @media only screen and (max-width: 50em) {
+            .projects .project-infor .infor-img-link img {
+              width: 100%; } }
         .projects .project-infor .infor-img-link:hover {
           filter: grayscale(0);
           transform: scale(1.015) translate(-1rem, -1rem); }
@@ -420,12 +507,30 @@ a {
         text-align: left;
         line-height: 1.6;
         align-self: center; }
+        @media only screen and (max-width: 50em) {
+          .projects .project-infor .infor-text {
+            padding: 0 2rem; } }
+        @media only screen and (max-width: 37.6em) {
+          .projects .project-infor .infor-text {
+            padding: 0; } }
         .projects .project-infor .infor-text .project-techs {
           margin-bottom: 2rem; }
+    @media only screen and (max-width: 50em) {
+      .projects .project-infor.column {
+        flex-direction: column; } }
+    @media only screen and (max-width: 50em) {
+      .projects .project-infor.column-reverse {
+        flex-direction: column-reverse; } }
     .projects .project .img-right {
       margin-right: 4rem; }
+      @media only screen and (max-width: 50em) {
+        .projects .project .img-right {
+          margin: 0; } }
     .projects .project .img-left {
       margin-left: 4rem; }
+      @media only screen and (max-width: 50em) {
+        .projects .project .img-left {
+          margin: 0; } }
     .projects .project .start-date {
       position: absolute;
       bottom: -3rem;
@@ -467,6 +572,7 @@ a {
   .footer__text {
     font-size: 1.4rem;
     text-align: center;
-    line-height: 1.6; }
+    line-height: 1.6;
+    padding: 0 10rem; }
     .footer__text p {
       margin-bottom: 1rem; }

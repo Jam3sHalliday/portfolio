@@ -3,6 +3,9 @@
 
     margin: 0 auto;
     padding-top: 10rem;
+    @media only screen and (max-width: $bp-800) {
+        width: 95vw;
+    }
 
     &-tag {
         background-image: linear-gradient(to left, $color-lightest-navy, #28b485);
@@ -15,11 +18,54 @@
         margin: 4rem auto;
         display: flex;
         justify-content: flex-start;
+
+        @media only screen and (max-width: $bp-800) {
+            width: 95%;
+            flex-direction: column;
+        }
+    }
+
+    &__tech {
+        margin-top: 2rem;
+        margin-left: 2rem;
+        display: none;
+
+        @media only screen and (max-width: $bp-800) {
+            display: block;
+        }
+
+        &-title {
+            font-size: 1.4rem;
+        }
+
+        .tech-list {
+            display: flex;
+            flex-wrap: wrap;
+            list-style-type: none;
+        }
+
+        .tech-item {
+            font-size: 1.4rem;
+            margin: 1rem 2rem;
+            display: flex;
+            align-items: center;
+
+            &::before {
+                content: "→";
+                font-size: 1.8rem;
+                margin-right: 1rem;
+                color: $color-green;
+            }
+        }
     }
 
     &__greeting {
         display: block;
         font-size: 1.6rem;
+
+        @media only screen and (max-width: $bp-800) {
+            font-size: 1.8rem;
+        }
     }
 
     &__text {
@@ -28,6 +74,12 @@
         align-self: center;
         line-height: 1.6;
         margin-right: 3rem;
+
+        @media only screen and (max-width: $bp-800) {
+            width: 100%;
+            font-size: 1.5rem;
+            margin-right: 0;
+        }
     }
 
 }
@@ -39,6 +91,10 @@
     display: block;     
     position: relative;
     width: 50rem;
+
+    @media only screen and (max-width: $bp-800) {
+        display: none;
+    }
 
     &__side {
         transition: all .8s ease;

@@ -7,6 +7,10 @@
   display: flex;
   align-items: center;
 
+  @media only screen and (max-width: $bp-600) {
+    width: 90vw;
+  }
+
   &__container {
     display: flex;
     flex-direction: column;
@@ -21,11 +25,21 @@
     display: flex;
     justify-content: center;
 
+    @media only screen and (max-width: $bp-800) {
+      flex-direction: column;
+    }
+
     .tab {
       transition: all 0.5s;
       @include flex-center;
       flex-direction: column;
       width: 25rem;
+
+      @media only screen and (max-width: $bp-800) {
+        flex-direction: row;
+        width: 90%;
+        margin-bottom: 3rem;
+      }
     }
 
     /* Style the buttons inside the tab */
@@ -44,6 +58,13 @@
       transform-origin: top;
       font-family: "Source Code Pro";
       text-align: left;
+
+      @media only screen and (max-width: $bp-800) {
+        padding: 2rem;
+        border-left: none;
+        border-bottom: 1px dashed $color-lightest-navy;
+        text-align: center;
+      }
     }
 
     /* Change background color of buttons on hover */
@@ -56,6 +77,11 @@
     .tab button.active {
       border-left: 1px solid $color-green;
       color: $color-green;
+
+      @media only screen and (max-width: $bp-800) {
+        border-left: none;
+        border-bottom: 1px solid $color-green;
+      }
     }
 
     /* Style the tab content */
@@ -65,6 +91,11 @@
       width: 70%;
 
       transition: all 0.5s;
+
+      @media only screen and (max-width: $bp-600) {
+        width: 100%;
+        padding: 0;
+      }
 
       .whereami {
         font-size: 1.6rem;

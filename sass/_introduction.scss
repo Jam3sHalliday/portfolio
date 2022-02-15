@@ -4,8 +4,11 @@
     position: relative;
     width: 80vw;
     height: 100vh;
-
     margin: 0 auto;
+
+    @media only screen and (max-width: $bp-800) {
+        width: 95vw;
+    }
 
     &__container {
         min-height: 90%;
@@ -17,7 +20,11 @@
 
     &__content {
         text-align: left;
-        margin: 8rem 10rem;        
+        margin: 8rem 10rem;
+
+        @media only screen and (max-width: $bp-800) {
+            margin: 4rem 5rem;
+        }
     }
 
     &__hello {
@@ -55,6 +62,7 @@
         @media only screen and (max-width: $bp-1000) {
             font-size: 1.4rem;
             margin-top: 1rem;
+            width: 100%;
         }
     }
 
