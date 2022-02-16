@@ -20,9 +20,6 @@ body {
   font-family: 'Source Code Pro', 'Open Sans', sans-serif;
   background-color: #0c0c0c;
   color: #e6f1ff; }
-  @media only screen and (max-width: 37.6em) {
-    body {
-      pointer-events: none; } }
 
 ::selection {
   color: #e6f1ff;
@@ -56,6 +53,9 @@ p.open-tag {
     content: "<"; }
   p.open-tag::after {
     content: ">"; }
+  @media only screen and (max-width: 37.6em) {
+    p.open-tag {
+      font-size: 2.4rem; } }
 
 p.close-tag {
   display: inline-block;
@@ -64,6 +64,9 @@ p.close-tag {
   font-family: "Source Code Pro", sans-serif; }
   p.close-tag::after {
     content: "</" attr(data-text) ">"; }
+  @media only screen and (max-width: 37.6em) {
+    p.close-tag {
+      font-size: 2.4rem; } }
 
 a {
   text-decoration: none;
@@ -86,7 +89,11 @@ a {
   height: 6rem;
   padding: 0 8rem;
   font-size: 1.3rem;
-  z-index: 10000; }
+  z-index: 1000; }
+  @media only screen and (max-width: 37.6em) {
+    .header {
+      padding: 0;
+      justify-content: center; } }
   .header__logo {
     padding-top: 1rem; }
     .header__logo img {
@@ -117,6 +124,10 @@ a {
           color: #64ffda;
           text-align: right;
           transform-origin: left; }
+          @media only screen and (max-width: 37.6em) {
+            .header__nav-item .nav-link::before {
+              content: "";
+              margin-right: 2px; } }
       .header__nav-item:hover .nav-link {
         color: #64ffda; }
         .header__nav-item:hover .nav-link::before {
@@ -159,6 +170,9 @@ a {
     @media only screen and (max-width: 62.5em) {
       .intro__name {
         font-size: 6rem; } }
+    @media only screen and (max-width: 62.5em) {
+      .intro__name {
+        font-size: 4rem; } }
   .intro__iam {
     font-size: 6rem;
     margin-left: .3rem;
@@ -168,6 +182,10 @@ a {
     @media only screen and (max-width: 62.5em) {
       .intro__iam {
         font-size: 4rem; } }
+    @media only screen and (max-width: 62.5em) {
+      .intro__iam {
+        font-size: 2rem;
+        height: auto; } }
   .intro__description {
     width: 60%;
     margin-top: 3rem;
@@ -177,6 +195,9 @@ a {
         font-size: 1.4rem;
         margin-top: 1rem;
         width: 100%; } }
+    @media only screen and (max-width: 62.5em) {
+      .intro__description {
+        font-size: 1.2rem; } }
   .intro__tag {
     color: #e9b171; }
   .intro__typed {

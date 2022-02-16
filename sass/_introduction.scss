@@ -40,6 +40,10 @@
         @media only screen and (max-width: $bp-1000) {
             font-size: 6rem;
         }
+
+        @media only screen and (max-width: $bp-1000) {
+            font-size: 4rem;
+        }
     }
 
     &__iam {
@@ -52,6 +56,11 @@
         @media only screen and (max-width: $bp-1000) {
             font-size: 4rem;
         }
+
+        @media only screen and (max-width: $bp-1000) {
+            font-size: 2rem;
+            height: auto;
+        }
     }
 
     &__description {
@@ -63,6 +72,10 @@
             font-size: 1.4rem;
             margin-top: 1rem;
             width: 100%;
+        }
+
+        @media only screen and (max-width: $bp-1000) {
+            font-size: 1.2rem;
         }
     }
 

@@ -13,7 +13,12 @@
     height: 6rem;
     padding: 0 8rem;
     font-size: 1.3rem;
-    z-index: 10000;
+    z-index: 1000;
+
+    @media only screen and (max-width: $bp-600) {
+        padding: 0;
+        justify-content: center;
+    }
 
     &__logo {
         padding-top: 1rem;
@@ -55,6 +60,11 @@
                     color: $color-green;
                     text-align: right;
                     transform-origin: left;
+
+                    @media only screen and (max-width: $bp-600) {
+                        content: "";
+                        margin-right: 2px;
+                    }
                 }
             }
 
@@ -82,3 +92,4 @@
         transform: translateX(0rem);
     }
 }
+
