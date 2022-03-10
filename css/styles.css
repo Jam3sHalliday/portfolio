@@ -204,15 +204,10 @@ a {
     background-size: contain;
     -webkit-background-clip: text;
     color: transparent;
-    font-weight: 600; }
-  .intro__typed-dev {
-    background-image: url("../img/programming-bg.jpg"); }
+    font-weight: 600;
+    color: #a8b2d1; }
   .intro__typed-gamer {
     color: #e6f1ff; }
-  .intro__typed-guitarist {
-    background-image: url("../img/sheet-bg.jpg"); }
-  .intro__typed-bugs {
-    background-image: url("../img/error-bg.png"); }
   .intro__cv {
     display: inline-block;
     font-size: 1.2rem;

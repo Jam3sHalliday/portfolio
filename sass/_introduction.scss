@@ -88,20 +88,21 @@
         -webkit-background-clip: text;
         color: transparent;
         font-weight: 600;
+        color: $color-light-slate;
     }
 
     &__typed-dev {
-        background-image: url("../img/programming-bg.jpg");
+        // background-image: url("../img/programming-bg.jpg");
     }
 
     &__typed-gamer {
         color: $color-white;
     }
     &__typed-guitarist {
-        background-image: url("../img/sheet-bg.jpg");
+        // background-image: url("../img/sheet-bg.jpg");
     }
     &__typed-bugs {
-        background-image: url("../img/error-bg.png");
+        // background-image: url("../img/error-bg.png");
     }
 
     &__cv {
